@@ -20,11 +20,10 @@ public class Stack {
     }
     // Muodostetaan uusi lista-alkio ja viedään se pinon huipulle
     public void push(String aData) {
-        
-        ListItem listItem = new ListItem();
-        listItem.setData(aData);
-        listItem.setmNext(mTop);
-        mTop = listItem;
+        ListItem newItem = new ListItem(); //Luodaan uusi lista-alkio
+        newItem.setData(aData);
+        newItem.setNext(mTop); // Kytketään uusi alkio aikaisempaan huippualkioon
+        mTop = newItem; // Uusi alkio pinon huippualkioksi
         mSize++;
     }
     
@@ -42,16 +41,12 @@ public class Stack {
     
     // tulostetaan pinon sisältö muuttamatta pinoa
     public void printItems() {
-        //while looppi tms. tänne joka tulostaa pinon sisällön yksitellen
-        if (mTop == null) {
-            return;
-        } else {
-            ListItem listItem = mTop;
-            while (listItem != null) {
-                System.out.println(listItem.getData());
-                listItem =listItem.getNext();
-            }
+        ListItem scanner = mTop;
+        while (scanner != null) {
+            System.out.println(scanner.getData() + ",");
+            scanner = scanner.getNext();
         }
+
     }
     
     // palautetaan pinottujen alkioiden lukumäärä
