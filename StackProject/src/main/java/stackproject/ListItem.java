@@ -29,7 +29,7 @@ public class ListItem {
         return mNext;
     }
 
-    public void setmNext(ListItem aNext) {
+    public void setNext(ListItem aNext) {
         mNext = aNext;
     }
     
