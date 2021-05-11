@@ -8,10 +8,7 @@ package stackproject;
 import java.util.LinkedList;
 import java.util.Iterator;
 
-/**
- *
- * @author Omistaja
- */
+
 public class Stack {
 
     private LinkedList<String> list;
